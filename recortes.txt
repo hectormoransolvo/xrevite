@@ -1,0 +1,71 @@
+  useEffect(async () => {
+    //let cVacante = params.vacant ;
+    //let cCandidate = params.candidate;
+    //let cApiv = apiv;
+    //console.log(cApiv);
+    
+    let cCadena = "http://localhost:8000/api/vencimientos/20270214909" ;
+    //let cCadena = "https://pokeapi.co/api/v2/pokemon/ditto" ;
+    console.log("url",cCadena);
+    await axios
+      .get(
+        cCadena,
+        //{ auth: { username: apiu, password: apit } }
+      )
+      .then((consult) => {
+        console.log(consult);
+        if (consult.data) {
+          console.log(consult.data);
+            //console.log(props.idVacant,props.idCandidate,cCadena )    ;    
+              
+            //let oneCandidate = consult.data.candidates.filter(function (e) {
+            //    return e.id == cCandidate ;
+           // }); 
+
+           // console.log(oneCandidate);
+
+
+          //setCandidates(oneCandidate);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      }
+      )
+      ;
+  },[]);
+
+
+
+      axios({
+      method: 'get',
+      url: 'http://localhost:8000/api/clientes'
+    })
+      .then(function (response) {
+        console.log("respuestaa",response) ;
+      }
+      .catch(err => {
+        console.log(err);
+      }   
+
+RECORTE 
+
+          {param_vencimientos.data[0].map(venci=>{
+                            return(
+                                <Text>
+                                    {venci.cuit}
+                                </Text>
+   
+                            )
+        })}
+
+
+        {param.vencimientos.map(venci=>{
+                     
+                                <Text style={styles.infoText} >
+                                    {venci.cuit}
+                                    {venci.dominio}
+                                </Text>
+   
+                     
+        })}

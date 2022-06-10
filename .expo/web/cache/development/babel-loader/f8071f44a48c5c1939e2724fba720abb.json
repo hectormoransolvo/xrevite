@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default, COL_TYPES } from \"./src/DataTable\";","map":{"version":3,"sources":["D:/react-native/xrevi/node_modules/react-native-datatable-component/index.js"],"names":["default","COL_TYPES"],"mappings":"AAAA,SAASA,OAAT,EAAkBC,SAAlB","sourcesContent":["export { default, COL_TYPES } from './src/DataTable';"]},"metadata":{},"sourceType":"module"}
